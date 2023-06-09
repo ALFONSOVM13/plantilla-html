@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #FFFFFF;
+    scroll-snap-align: start;
+  }
+  
+  section:nth-child(odd) {
+    background-color: #4831D4;
+  }
+  
+  section:nth-child(even) {
+    background-color: #F9F9F9;
+  }
+  
+  
+  /* Custom scroll points */
+  .scroll-points {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .scroll-points button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0.5px solid #ccf381;
+    background: #ccf381; 
+    transform: rotate(45deg);
+    margin-bottom: 10px;
+    transition: opacity 0.3s, background-color 0.3s, transform 0.3s;
+  }
+  
+  .scroll-points button.current {
+    opacity: 1;
+    transform: rotate(0);
+    border-radius: 0;
+    background-color: transparent;
+    border-color: transparent;
+  }
